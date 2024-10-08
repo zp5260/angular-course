@@ -51,3 +51,10 @@ export const resolveUserName: ResolveFn<string> = (activatedRoute: ActivatedRout
 
   return userName
 };
+
+export const resolveTitle: ResolveFn<string> = (
+  activatedRoute,
+  routeState
+) => {
+  return resolveUserName(activatedRoute, routeState) + '\'s Tasks' // Max's Tasks
+}
